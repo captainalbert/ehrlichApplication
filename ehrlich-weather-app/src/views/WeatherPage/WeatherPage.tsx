@@ -20,9 +20,9 @@ const WeatherPage = () => {
       // Extract latitude and longitude from the geolocation response
       // const { latitude, longitude } = geolocationResponse.data;
 
-      const { lat, lon } = geolocationResponse.data.find(
-        (element: any) => element.country === "PH"
-      );
+      console.log("geolocationResponse.data", geolocationResponse.data);
+
+      const { lat, lon } = geolocationResponse.data[0];
       // Use latitude and longitude to fetch weather data
       fetchWeatherData(lat, lon);
     } catch (error) {
@@ -51,12 +51,13 @@ const WeatherPage = () => {
     fetchGeolocationData();
   }, [location]);
 
-  // Date, Temp(F), Description, Main, Pressure, Humidity
-  // Description, Main -> Under, weatherData.weather.description and weatherData.weather.main
-  // Temp(in Kelvin, convert to F), Pressure, Humidity -> weatherData.weather.main
   return (
     <div className={"weather-page"}>
-      <WeatherTable weatherData={weatherData} />
+      {!weatherData ? (
+        <div>Loading...</div>
+      ) : (
+        <WeatherTable weatherData={weatherData} />
+      )}
     </div>
   );
 };

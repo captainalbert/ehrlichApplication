@@ -2,17 +2,26 @@
 
 import "./WeatherTable.css"; // Import the CSS file
 
+import { kelvinToFahrenheit } from "../../../utils/helper/temperatureConverter";
+import { formatDateToday } from "../../../utils/helper/dateToday";
+
 interface WeatherTableProps {
   weatherData: any;
 }
 
 const WeatherTable = ({ weatherData }: WeatherTableProps) => {
+  const { weather, main } = weatherData;
+  const { description, main: weatherMain } = weather[0];
+  const { temp, humidity, pressure } = main;
+
+  const formattedDateToday = formatDateToday();
+
   return (
     <table>
       <thead>
         <tr>
           <th>Date (mm/dd/yy)</th>
-          <th>Temperature</th>
+          <th>Temperature (F)</th>
           <th className="desktop-view">Description</th>
           <th className="desktop-view">Main</th>
           <th className="desktop-view">Pressure</th>
@@ -21,12 +30,12 @@ const WeatherTable = ({ weatherData }: WeatherTableProps) => {
       </thead>
       <tbody>
         <tr>
-          <td>2022-01-01</td>
-          <td>25°C</td>
-          <td className="desktop-view">Clear sky</td>
-          <td className="desktop-view">Sunny</td>
-          <td className="desktop-view">1015 hPa</td>
-          <td className="desktop-view">50%</td>
+          <td>{formattedDateToday}</td>
+          <td>{Math.round(kelvinToFahrenheit(temp))}</td>
+          <td className="desktop-view">{description}</td>
+          <td className="desktop-view">{weatherMain}</td>
+          <td className="desktop-view">{pressure}</td>
+          <td className="desktop-view">{humidity}</td>
         </tr>
       </tbody>
     </table>
