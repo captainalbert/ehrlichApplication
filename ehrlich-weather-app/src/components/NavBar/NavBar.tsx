@@ -9,6 +9,7 @@ import React from "react";
 // styles
 import "./NavBar.css";
 import LogoutButton from "../Button/LogoutButton";
+import { Titles } from "../../shared/enums/contants";
 
 interface NavbarProps {
   isAuthenticated: boolean;
@@ -19,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-brand">
-          Weather App
+          {Titles.WEATHER_FORECAST}
         </a>
 
         {/* Logout element */}

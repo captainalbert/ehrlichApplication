@@ -2,8 +2,9 @@
 
 import "./WeatherTable.css"; // Import the CSS file
 
-import { kelvinToFahrenheit } from "../../../utils/helper/temperatureConverter";
-import { formatDateToday } from "../../../utils/helper/dateToday";
+import { kelvinToFahrenheit } from "../../../shared/utils/helper/temperatureConverter";
+import { formatDateToday } from "../../../shared/utils/helper/dateToday";
+import { Labels } from "../../../shared/enums/contants";
 
 interface WeatherTableProps {
   weatherData: any;
@@ -20,12 +21,12 @@ const WeatherTable = ({ weatherData }: WeatherTableProps) => {
     <table>
       <thead>
         <tr>
-          <th>Date (mm/dd/yy)</th>
-          <th>Temperature (F)</th>
-          <th className="desktop-view">Description</th>
-          <th className="desktop-view">Main</th>
-          <th className="desktop-view">Pressure</th>
-          <th className="desktop-view">Humidity</th>
+          <th>{Labels.DATE}</th>
+          <th>{Labels.TEMPERATURE}</th>
+          <th className="desktop-view">{Labels.DESCRIPTION}</th>
+          <th className="desktop-view">{Labels.MAIN}</th>
+          <th className="desktop-view">{Labels.PRESSURE}</th>
+          <th className="desktop-view">{Labels.HUMIDITY}</th>
         </tr>
       </thead>
       <tbody>
