@@ -2,11 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 15em;
+  padding-top: 10em;
   height: 90vh; /* Set height to 100% of the viewport height */
-  /* width: 100%; */
   flex-direction: column;
   text-align: left;
-  padding-inline-start: 20em;
-  padding-inline-end: 20em;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  .welcome {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
 }

@@ -29,11 +29,15 @@ const Navbar = ({ isAuthenticated }: NavbarProps) => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-brand">
+          <i
+            className="fas fa-cloud"
+            style={{ marginLeft: 10, marginRight: 10 }}
+          />
           {Titles.WEATHER_FORECAST}
         </a>
 
         {isAuthenticated && (
-          <div className={`navbar-links`}>
+          <div className={`navbar-logout`}>
             <LogoutButton onClick={() => logout()} title={ButtonTexts.LOGOUT} />
           </div>
         )}

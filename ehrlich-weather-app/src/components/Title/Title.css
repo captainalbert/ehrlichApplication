@@ -1,7 +1,3 @@
-h4 {
-  display: flex;
-}
-
-title {
+.title {
   white-space: pre-line;
 }
