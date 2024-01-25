@@ -14,7 +14,7 @@ interface NavbarProps {
   isAuthenticated: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isAuthenticated = true }) => {
+const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
   // State for showing navigationBar
   const [isNavbarOpen, setNavbarOpen] = useState(false);
 
@@ -38,9 +38,6 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated = true }) => {
         {/* Logout element */}
         {isAuthenticated && (
           <div className={`navbar-links ${isNavbarOpen ? "open" : ""}`}>
-            {/* <a href="/" className="navbar-link" onClick={toggleNavbar}>
-              logout
-            </a> */}
             <LogoutButton />
           </div>
         )}
