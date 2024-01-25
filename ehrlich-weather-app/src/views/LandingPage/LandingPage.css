@@ -1,3 +1,5 @@
+/* NavBar.css */
+
 .welcome {
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
 }
 
 /* Media query for mobile view */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .welcome {
     margin-left: 3em;
     margin-right: 3em;

@@ -1,3 +1,5 @@
+/* NavBar.css */
+
 .home {
   display: flex;
   height: 90vh;
@@ -5,4 +7,11 @@
   justify-content: flex-start;
   padding-top: 5em;
   flex-direction: column;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .user-info {
+    display: none;
+  }
 }

@@ -29,10 +29,12 @@ const HomePage = ({ user }: HomePageProps) => {
 
   return (
     <div className="home">
-      <Title title={nickname} />
-      <Link
-        to={`https://github.com/${nickname}`}
-      >{`https://github.com/${nickname}`}</Link>
+      <div className="user-info">
+        <Title title={nickname} />
+        <Link
+          to={`https://github.com/${nickname}`}
+        >{`https://github.com/${nickname}`}</Link>
+      </div>
 
       <TextInput
         placeholder="City"
