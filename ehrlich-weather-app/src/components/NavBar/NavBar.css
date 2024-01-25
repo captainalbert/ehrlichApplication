@@ -21,13 +21,7 @@
   font-weight: bold;
 }
 
-.navbar-toggle {
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: none;
-}
-
-.navbar-links {
+.navbar-logout {
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -35,15 +29,8 @@
   padding: 0;
 }
 
-.navbar-link {
-  text-decoration: none;
-  color: black;
-  margin: 0 10px;
-  font-size: 1rem;
-}
-
 /* Media query for mobile view */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -55,11 +42,7 @@
     padding: 10px;
   }
 
-  .navbar-links.open {
+  .navbar-logout {
     display: flex;
-  }
-
-  .navbar-toggle {
-    display: block;
   }
 }

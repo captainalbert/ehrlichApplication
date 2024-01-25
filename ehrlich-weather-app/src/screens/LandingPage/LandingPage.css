@@ -1,0 +1,21 @@
+/* NavBar.css */
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10em;
+  height: 90vh; /* Set height to 100% of the viewport height */
+  flex-direction: column;
+  text-align: left;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .welcome {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}

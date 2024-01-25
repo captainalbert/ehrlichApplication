@@ -1,39 +1,44 @@
 /**
- * This component is used for navigation bar of the website.
+ * A component used for web app's navigation bar.
  *
- * @argument isAuthenticated - boolean
- * @author Albert John Tulop
+ * @param {isAuthenticated} boolean - The value used to show logout button.
+ * @type {Component}
+ * @returns {NavBar Component}
  */
-import React, { useState } from "react";
+
+// packege
+import { useAuth0 } from "@auth0/auth0-react";
 
 // styles
 import "./NavBar.css";
-import LogoutButton from "../Button/LogoutButton";
+
+// component
+import LogoutButton from "../Button/Button";
+
+// constants
+import { ButtonTexts, Titles } from "../../shared/enums/contants";
 
 interface NavbarProps {
   isAuthenticated: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
-  // State for showing navigationBar
-  const [isNavbarOpen, setNavbarOpen] = useState(false);
-
-  // Function to toggle the navbar state
-  const toggleNavbar = () => {
-    setNavbarOpen(!isNavbarOpen);
-  };
+const Navbar = ({ isAuthenticated }: NavbarProps) => {
+  const { logout } = useAuth0();
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-brand">
-          Weather App
+          <i
+            className="fas fa-cloud"
+            style={{ marginLeft: 10, marginRight: 10 }}
+          />
+          {Titles.WEATHER_FORECAST}
         </a>
 
-        {/* Logout element */}
         {isAuthenticated && (
-          <div className={`navbar-links ${isNavbarOpen ? "open" : ""}`}>
-            <LogoutButton />
+          <div className={`navbar-logout`}>
+            <LogoutButton onClick={() => logout()} title={ButtonTexts.LOGOUT} />
           </div>
         )}
       </div>
