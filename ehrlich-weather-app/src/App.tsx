@@ -6,12 +6,12 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 
 // views imports
-import LandingPage from "./views/LandingPage/LandingPage";
-import HomePage from "./views/HomePage/HomePage";
+import LandingPage from "./screens/LandingPage/LandingPage";
+import HomePage from "./screens/HomePage/HomePage";
 
 // components imports
 import Navbar from "./components/NavBar/NavBar";
-import WeatherPage from "./views/WeatherPage/WeatherPage";
+import WeatherPage from "./screens/WeatherPage/WeatherPage";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0(); // destructure needed states from useAuth0()

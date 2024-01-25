@@ -26,6 +26,7 @@ interface HomePageProps {
 const HomePage = ({ user }: HomePageProps) => {
   const { nickname } = user;
   const [city, setCity] = useState("");
+  const [error, setError] = useState("");
 
   return (
     <div className="home">
@@ -38,14 +39,19 @@ const HomePage = ({ user }: HomePageProps) => {
 
       <TextInput
         placeholder="City"
-        onChange={(e) => setCity(e.target.value)}
+        onChange={(e) => {
+          setCity(e.target.value), setError("");
+        }}
         value={city}
+        error={error ? true : false}
       />
 
-      <Link to={`/weather/${city}`}>
+      <Link to={city ? `/weather/${city}` : "/"}>
         <Button
           title="Display Weather"
-          onClick={() => console.log("Navigate to weather page")}
+          onClick={() =>
+            !city ? setError("Please enter city first.") : setError("")
+          }
           style={{ alignSelf: "center", marginTop: 20 }}
         />
       </Link>
