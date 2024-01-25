@@ -15,7 +15,6 @@
   /* background-color: rebeccapurple; */
 }
 
-/* Media query for mobile view */
 @media (max-width: 1024px) {
   .welcome {
     margin-left: 3em;
@@ -25,6 +24,7 @@
   }
 }
 
+/* Media query for mobile view */
 @media (max-width: 768px) {
   .welcome {
     margin-left: 3em;

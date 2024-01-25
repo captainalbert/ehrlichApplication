@@ -22,7 +22,6 @@ const LandingPage = () => {
       <LoginButton
         onClick={() => loginWithRedirect()} // built-in login function in useAuth that allows redirect right login click
         title={ButtonTexts.LOGIN}
-        // style={{ marginLeft: 40 }}
       />
     </div>
   );
