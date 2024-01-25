@@ -1,4 +1,4 @@
-import React from "react";
+// styles
 import "./Button.css";
 
 interface ButtonProps {

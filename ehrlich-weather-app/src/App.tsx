@@ -1,6 +1,11 @@
+// styles
 import "./App.css";
-import Navbar from "./components/NavBar/NavBar";
+
+// views
 import LandingPage from "./views/LandingPage/LandingPage";
+
+// components
+import Navbar from "./components/NavBar/NavBar";
 
 function App() {
   return (

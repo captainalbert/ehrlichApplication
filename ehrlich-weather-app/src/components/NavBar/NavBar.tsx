@@ -5,10 +5,11 @@
  * @author Albert John Tulop
  */
 import React, { useState } from "react";
+
+// styles
 import "./NavBar.css";
 
 interface NavbarProps {
-  // You can define any additional props here
   isAuthenticated: boolean;
 }
 
