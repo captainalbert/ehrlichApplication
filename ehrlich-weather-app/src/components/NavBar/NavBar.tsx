@@ -8,6 +8,7 @@ import React, { useState } from "react";
 
 // styles
 import "./NavBar.css";
+import LogoutButton from "../LoginButton/LogoutButton";
 
 interface NavbarProps {
   isAuthenticated: boolean;
@@ -37,9 +38,10 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated = true }) => {
         {/* Logout element */}
         {isAuthenticated && (
           <div className={`navbar-links ${isNavbarOpen ? "open" : ""}`}>
-            <a href="/" className="navbar-link" onClick={toggleNavbar}>
+            {/* <a href="/" className="navbar-link" onClick={toggleNavbar}>
               logout
-            </a>
+            </a> */}
+            <LogoutButton />
           </div>
         )}
       </div>
