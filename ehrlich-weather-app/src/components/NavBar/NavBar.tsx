@@ -3,7 +3,6 @@
  *
  * @param {isAuthenticated} boolean - The value used to show logout button.
  * @type {Component}
- * @returns {NavBar Component}
  */
 
 // packege

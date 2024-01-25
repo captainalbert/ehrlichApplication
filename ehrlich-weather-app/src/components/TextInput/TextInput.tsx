@@ -5,7 +5,6 @@
  * @param {onChange} function - The function that handles the onChange event of the input
  * @param {placeholder} string -  The placeholder for input
  * @type {Component}
- * @returns {TextInput Component}
  */
 
 // style
