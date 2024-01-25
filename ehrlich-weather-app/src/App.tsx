@@ -18,7 +18,7 @@ function App() {
   console.log("isAuthenticated", isAuthenticated);
   return (
     <div>
-      <Navbar isAuthenticated />
+      <Navbar isAuthenticated={isAuthenticated} />
       {isAuthenticated ? <HomePage user={user} /> : <LandingPage />}
     </div>
   );
