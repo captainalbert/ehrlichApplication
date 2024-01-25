@@ -1,16 +1,18 @@
 // styles
+import { CSSProperties } from "react";
 import "./Button.css";
 
 interface ButtonProps {
   title: string;
   onClick: () => void;
+  style?: CSSProperties;
 }
 
-const Button = ({ title, onClick }: ButtonProps) => {
+const Button = ({ title, onClick, style }: ButtonProps) => {
   return (
-    <div onClick={onClick} className={"loginButton"}>
+    <button onClick={onClick} className={"login-button"} style={style}>
       <p>{title}</p>
-    </div>
+    </button>
   );
 };
 
