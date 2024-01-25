@@ -1,7 +1,11 @@
 .welcome {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 10rem;
   height: 90vh;
   flex-direction: column;
+  text-align: left;
+  padding-inline-start: 20rem;
+  padding-inline-end: 20rem;
 }
