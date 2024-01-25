@@ -2,20 +2,34 @@
 
 .welcome {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   padding-top: 10em;
   height: 90vh; /* Set height to 100% of the viewport height */
   flex-direction: column;
   text-align: left;
+  padding-left: 2em;
+  padding-right: 2em;
   margin-left: 15em;
   margin-right: 15em;
+  /* background-color: rebeccapurple; */
 }
 
 /* Media query for mobile view */
+@media (max-width: 1024px) {
+  .welcome {
+    margin-left: 3em;
+    margin-right: 3em;
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+}
+
 @media (max-width: 768px) {
   .welcome {
     margin-left: 3em;
     margin-right: 3em;
+    padding-left: 0em;
+    padding-right: 0em;
   }
 }

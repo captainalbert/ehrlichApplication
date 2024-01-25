@@ -5,7 +5,6 @@
  * @param {onClick} function - The function that handles the onClick event of the button
  * @param {style} object - (Optional) additional custom styling of the button
  * @type {Component}
- * @returns {Button Component}
  */
 
 // react

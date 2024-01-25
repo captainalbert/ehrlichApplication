@@ -4,7 +4,6 @@
  * @param {weatherData} object - The weather data from the location query
  *
  * @type {Component}
- * @returns {WeatherTable Component}
  */
 
 // style

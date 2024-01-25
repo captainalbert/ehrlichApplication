@@ -2,7 +2,6 @@
  * HomePage screen
  *
  * @param {user} object - The user info object to be displayed in home page
- * @returns {HomePage Screen}
  */
 
 // react
