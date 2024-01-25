@@ -1,6 +1,8 @@
 import "./HomePage.css";
 
 import Title from "../../components/Title/Title";
+import TextInput from "../../components/TextInput/TextInput";
+import { useState } from "react";
 
 type userObject = {
   name: string;
@@ -12,6 +14,8 @@ interface HomePageProps {
 
 const HomePage = ({ user }: HomePageProps) => {
   const { nickname } = user;
+  const [city, setCity] = useState("");
+
   console.log(user);
   return (
     <div className="home">
@@ -19,6 +23,12 @@ const HomePage = ({ user }: HomePageProps) => {
       <a
         href={`https://github.com/${nickname}`}
       >{`https://github.com/${nickname}`}</a>
+
+      <TextInput
+        placeholder="City"
+        onChange={(e) => setCity(e.target.value)}
+        value={city}
+      />
     </div>
   );
 };
