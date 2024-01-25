@@ -1,23 +1,20 @@
 import "./HomePage.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Title from "../../components/Title/Title";
 import TextInput from "../../components/TextInput/TextInput";
-import { useState } from "react";
 import Button from "../../components/Button/Button";
 
-type userObject = {
-  name: string;
-  nickname: string;
-};
 interface HomePageProps {
-  user: userObject;
+  user: any;
 }
 
 const HomePage = ({ user }: HomePageProps) => {
   const { nickname } = user;
+
   const [city, setCity] = useState("");
 
-  console.log(user);
   return (
     <div className="home">
       <Title title={nickname} />
@@ -31,11 +28,13 @@ const HomePage = ({ user }: HomePageProps) => {
         value={city}
       />
 
-      <Button
-        title="Display Weather"
-        onClick={() => console.log("Display weather")}
-        style={{ alignSelf: "center", marginTop: 20 }}
-      />
+      <Link to={`/weather/${city}`}>
+        <Button
+          title="Display Weather"
+          onClick={() => console.log("Display weather")}
+          style={{ alignSelf: "center", marginTop: 20 }}
+        />
+      </Link>
     </div>
   );
 };

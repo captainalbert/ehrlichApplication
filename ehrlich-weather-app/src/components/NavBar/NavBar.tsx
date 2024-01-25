@@ -4,7 +4,7 @@
  * @argument isAuthenticated - boolean
  * @author Albert John Tulop
  */
-import React, { useState } from "react";
+import React from "react";
 
 // styles
 import "./NavBar.css";
@@ -15,14 +15,6 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
-  // State for showing navigationBar
-  const [isNavbarOpen, setNavbarOpen] = useState(false);
-
-  // Function to toggle the navbar state
-  const toggleNavbar = () => {
-    setNavbarOpen(!isNavbarOpen);
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -32,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
 
         {/* Logout element */}
         {isAuthenticated && (
-          <div className={`navbar-links ${isNavbarOpen ? "open" : ""}`}>
+          <div className={`navbar-links`}>
             <LogoutButton />
           </div>
         )}

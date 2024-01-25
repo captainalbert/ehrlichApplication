@@ -1,0 +1,7 @@
+.weather-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20ex;
+  height: 100vh;
+}
