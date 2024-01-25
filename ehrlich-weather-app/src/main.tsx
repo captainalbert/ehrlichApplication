@@ -1,9 +1,15 @@
+// react imports
 import React from "react";
+
+// package imports
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import { Auth0Provider } from "@auth0/auth0-react";
+
+// style imports
 import "./index.css";
 
-import { Auth0Provider } from "@auth0/auth0-react";
+// components imports
+import App from "./App.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

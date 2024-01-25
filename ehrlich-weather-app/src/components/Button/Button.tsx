@@ -1,5 +1,17 @@
-// styles
+/**
+ * A button component
+ *
+ * @param {title} string - The title of the button
+ * @param {onClick} function - The function that handles the onClick event of the button
+ * @param {style} object - (Optional) additional custom styling of the button
+ * @type {Component}
+ * @returns {Button Component}
+ */
+
+// react
 import { CSSProperties } from "react";
+
+// styles
 import "./Button.css";
 
 interface ButtonProps {

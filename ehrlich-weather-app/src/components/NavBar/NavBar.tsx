@@ -1,21 +1,30 @@
 /**
- * This component is used for navigation bar of the website.
+ * A component used for web app's navigation bar.
  *
- * @argument isAuthenticated - boolean
- * @author Albert John Tulop
+ * @param {isAuthenticated} boolean - The value used to show logout button.
+ * @type {Component}
+ * @returns {NavBar Component}
  */
-import React from "react";
+
+// packege
+import { useAuth0 } from "@auth0/auth0-react";
 
 // styles
 import "./NavBar.css";
-import LogoutButton from "../Button/LogoutButton";
-import { Titles } from "../../shared/enums/contants";
+
+// component
+import LogoutButton from "../Button/Button";
+
+// constants
+import { ButtonTexts, Titles } from "../../shared/enums/contants";
 
 interface NavbarProps {
   isAuthenticated: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
+const Navbar = ({ isAuthenticated }: NavbarProps) => {
+  const { logout } = useAuth0();
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -23,10 +32,9 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
           {Titles.WEATHER_FORECAST}
         </a>
 
-        {/* Logout element */}
         {isAuthenticated && (
           <div className={`navbar-links`}>
-            <LogoutButton />
+            <LogoutButton onClick={() => logout()} title={ButtonTexts.LOGOUT} />
           </div>
         )}
       </div>

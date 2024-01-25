@@ -17,4 +17,5 @@ export enum ButtonTexts {
 
 export enum Titles {
   WEATHER_FORECAST = "Weather Forecast",
+  WELCOME = "Welcome to the weather forecast web application. Please login with your GitHub user to use the application and view the weather in your city.",
 }

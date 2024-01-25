@@ -1,7 +1,16 @@
-// WeatherTable.js
+/**
+ * A weather table component
+ *
+ * @param {weatherData} object - The weather data from the location query
+ *
+ * @type {Component}
+ * @returns {WeatherTable Component}
+ */
 
-import "./WeatherTable.css"; // Import the CSS file
+// style
+import "./WeatherTable.css";
 
+// constants
 import { kelvinToFahrenheit } from "../../../shared/utils/helper/temperatureConverter";
 import { formatDateToday } from "../../../shared/utils/helper/dateToday";
 import { Labels } from "../../../shared/enums/contants";
