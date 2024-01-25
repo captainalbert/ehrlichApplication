@@ -1,11 +1,12 @@
 .welcome {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  margin-top: 10rem;
-  height: 90vh;
+  padding-top: 15em;
+  height: 90vh; /* Set height to 100% of the viewport height */
+  /* width: 100%; */
   flex-direction: column;
   text-align: left;
-  padding-inline-start: 20rem;
-  padding-inline-end: 20rem;
+  padding-inline-start: 20em;
+  padding-inline-end: 20em;
 }

@@ -1,9 +1,8 @@
 // styles
 import "./LandingPage.css";
 
-import Button from "../../components/Button/Button";
 import Title from "../../components/Title/Title";
-import LoginButton from "../../components/LoginButton/LoginButton";
+import LoginButton from "../../components/Button/LoginButton";
 
 const LandingPage = () => {
   // This function is responsible for handling login.

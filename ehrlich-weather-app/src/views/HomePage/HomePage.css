@@ -1,0 +1,8 @@
+.home {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5em;
+  flex-direction: column;
+}
