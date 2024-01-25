@@ -4,12 +4,11 @@ import "./Button.css";
 interface ButtonProps {
   title: string;
   onClick: () => void;
-  className: string;
 }
 
-const Button = ({ className, title, onClick }: ButtonProps) => {
+const Button = ({ title, onClick }: ButtonProps) => {
   return (
-    <div onClick={onClick} className={className}>
+    <div onClick={onClick} className={"loginButton"}>
       <p>{title}</p>
     </div>
   );
